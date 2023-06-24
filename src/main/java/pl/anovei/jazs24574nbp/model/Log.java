@@ -18,20 +18,19 @@ import java.util.Date;
 public class Log {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Schema(name="Identyfikator komunikatu")
     public Long id;
 
-    @Schema(name="Waluta")
+
     @Column(length = 3)
     public String currency;
 
-    @Schema(name="Data początkowa")
+
     public String start_date;
 
-    @Schema(name="Data końcowa")
+
     public String end_date;
 
-    @Schema(name="Średni kurs z przedziału start_date i end_date")
+
     public double avg;
 
     @Column(nullable = false, updatable = false)
