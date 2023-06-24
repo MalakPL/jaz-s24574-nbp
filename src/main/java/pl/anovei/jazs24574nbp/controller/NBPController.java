@@ -19,7 +19,7 @@ public class NBPController {
     }
 
     @GetMapping("/{currency}/{startDate}/{endDate}")
-    public ResponseEntity<ApiResponse> getMovieById(@PathVariable("currency") String currency, @PathVariable("startDate") @DateTimeFormat(pattern = "yyyy-MM-dd") String startDate, @PathVariable("endDate") @DateTimeFormat(pattern = "yyyy-MM-dd") String endDate) {
+    public ResponseEntity<ApiResponse> getAvg(@PathVariable("currency") String currency, @PathVariable("startDate") @DateTimeFormat(pattern = "yyyy-MM-dd") String startDate, @PathVariable("endDate") @DateTimeFormat(pattern = "yyyy-MM-dd") String endDate) {
 
         ApiResponse response = new ApiResponse();
         response.isSuccess = false;
